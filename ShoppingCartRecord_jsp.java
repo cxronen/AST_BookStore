@@ -158,7 +158,7 @@ public class ShoppingCartRecord_jsp extends HttpJspBase {
     param = replace(param,"&gt;",">");
     param = replace(param,"&amp;lt;","<");
     param = replace(param,"&amp;gt;",">");
-    return HtmlEscapers.htmlEscaper().escape(param);
+    return HtmlUtils.htmlEscape(HtmlUtils.htmlUnescape(param.toString()));
   }
 
   boolean isNumber (String param) {
